@@ -1,0 +1,16 @@
+.footer:hover, .footer:focus {
+  background-color: #2980B9;
+}
+.footer {
+  background-color: #E0EADC;
+  text-indent: 1ex;
+  text-align: left;
+  margin: auto;
+  position: relative;
+  width: 19%;
+  min-height: 48px;
+  display: inline-block;
+  min-width: 150px;
+  font-family: "Arial", Helvetica, sans-serif;
+  cursor: pointer;
+}

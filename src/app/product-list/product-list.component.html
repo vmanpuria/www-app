@@ -1,0 +1,101 @@
+<div *ngFor="let product of products">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "{{ product.name }}",
+      "image": [
+        {{ getLargeImageUrl(product.id) }}
+      ],
+      "description": "{{ product.description }}",
+      "sku": "{{ product.sku }}",
+      "gtin12": "{{ product.gtin12 }}",
+      "brand": {
+        "@type": "Brand",
+        "name": "{{ product.brand }}"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ getProductUrl(product.id) }}",
+        "priceCurrency": "USD",
+        "price": "{{ product.price }}",
+        "priceValidUntil": "2021-12-31",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "currency": "USD",
+            "value": "0.00"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "USA"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": "1",
+              "maxValue": "3",
+              "unitCode": "d"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": "2",
+              "maxValue": "5",
+              "unitCode": "d"
+            } 
+          }
+        },
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "BuyContactLensSolutions.com"
+        }
+      }
+    }      
+  </script>
+  <div class="product" [id]="product.id">
+    <ul class="noDotList">
+      <li>
+        <picture>
+          <source *ngFor="let imageType of product.image.types" [type]="'image/' + imageType" [srcset]="getImagePathsWithWidth(product.id, imageType, product.image.sizes)" sizes="50vw">
+          <img class="image" src="./images/purilens-plus-12-bottle-pack.jpg" [srcset]="getImagePathsWithWidth(product.id, 'jpeg', product.image.sizes)" sizes="50vw" [alt]="product.name">
+        </picture>
+      </li>
+    </ul>
+  </div>
+  <div class="product" title="product description">
+    <ul class="noDotList">
+      <li>
+        <ul class="noDotList">
+          <li><strong class="titleFont"> {{ product.name }} </strong></li>
+          <li><small class="brandFont"> {{ product.brand }} </small></li>
+          <li><br></li>
+          <li>
+            <ul style="margin: auto">
+              <li *ngFor="let feature of product.features"> {{ feature }} </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="noDotList">
+      <li>
+        <ul class="noDotList">
+          <li><span class="priceFont"> {{ product.price }} + Free Shipping + Tax</span></li>
+        </ul>
+      </li>
+      <li><br></li>
+      <li>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" [value]="product.paypal.buttonId">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+h2 {
+  margin: 0;
+}
+body {
+  margin: 0;
+}
+.product {
+  width: 45%;
+  display: inline-block;
+  min-width: 400px;
+  vertical-align: middle;
+}
+.image {
+  width: 100%;
+}
+ul.noDotList {
+  list-style-type: none;
+}
+.priceFont {
+  font-family: "Arial Black", Gadget, sans-serif;
+  color: rgb(61, 134, 52);
+}
+.titleFont {
+  font-family: "Arial Black", Gadget, sans-serif;
+  color: rgb(51, 104, 255);
+}
+.brandFont {
+  font-family: "Arial Black", Gadget, sans-serif;
+  color: black;
+  opacity: 0.9;
+}
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+.show {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: #808000;
+  visibility: visible;
+}
+.about {
+  display: none;
+}
+.skip-link:focus {
+  top: 0;
+}
