@@ -1,67 +1,10 @@
 <div *ngFor="let product of products">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "{{ product.name }}",
-      "image": [
-        {{ getLargeImageUrl(product.id) }}
-      ],
-      "description": "{{ product.description }}",
-      "sku": "{{ product.sku }}",
-      "gtin12": "{{ product.gtin12 }}",
-      "brand": {
-        "@type": "Brand",
-        "name": "{{ product.brand }}"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "{{ getProductUrl(product.id) }}",
-        "priceCurrency": "USD",
-        "price": "{{ product.price }}",
-        "priceValidUntil": "2021-12-31",
-        "shippingDetails": {
-          "@type": "OfferShippingDetails",
-          "shippingRate": {
-            "@type": "MonetaryAmount",
-            "currency": "USD",
-            "value": "0.00"
-          },
-          "shippingDestination": {
-            "@type": "DefinedRegion",
-            "addressCountry": "USA"
-          },
-          "deliveryTime": {
-            "@type": "ShippingDeliveryTime",
-            "handlingTime": {
-              "@type": "QuantitativeValue",
-              "minValue": "1",
-              "maxValue": "3",
-              "unitCode": "d"
-            },
-            "transitTime": {
-              "@type": "QuantitativeValue",
-              "minValue": "2",
-              "maxValue": "5",
-              "unitCode": "d"
-            } 
-          }
-        },
-        "itemCondition": "https://schema.org/NewCondition",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "BuyContactLensSolutions.com"
-        }
-      }
-    }      
-  </script>
   <div class="product" [id]="product.id">
     <ul class="noDotList">
       <li>
         <picture>
-          <source *ngFor="let imageType of product.image.types" [type]="'image/' + imageType" [srcset]="getImagePathsWithWidth(product.id, imageType, product.image.sizes)" sizes="50vw">
-          <img class="image" src="./images/purilens-plus-12-bottle-pack.jpg" [srcset]="getImagePathsWithWidth(product.id, 'jpeg', product.image.sizes)" sizes="50vw" [alt]="product.name">
+          <source *ngFor="let imageType of product.image.types" [type]="'image/' + imageType" [srcset]="getImagePathsWithWidth(product, imageType)" sizes="50vw">
+          <img class="image" [src]="getMainImagePath(product)" [srcset]="getJpegImagePathsWithWidth(product)" sizes="50vw" [alt]="product.name">
         </picture>
       </li>
     </ul>
