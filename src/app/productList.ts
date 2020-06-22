@@ -1,4 +1,22 @@
-export const products = [
+import { Product, Image,  ImageSize, } from './product';
+
+export const productList: Array<Product> = getProductList();
+
+function getProductList(): Array<Product> {
+  let productList: Array<Product> = [];
+  for(let productObject of productObjects) {
+    let imageSizes: Array<ImageSize> = [];
+    for (let imageSize of productObject.image.sizes) {
+      imageSizes.push(new ImageSize(imageSize.type, imageSize.width))
+    };
+    let image = new Image(productObject.image.types, imageSizes);
+    let product = new Product(productObject.name, productObject.id, productObject.description,productObject.sku, productObject.gtin12, productObject.brand, productObject.price, productObject.features, image, productObject.paypal);
+    productList.push(product);
+  }
+  return productList;
+}
+
+export const productObjects = [
   {
     name: 'PuriLens Plus 12 bottles, 4 oz each, Preservative Free Saline',
     id: 'purilens-plus-12-bottle-pack',
@@ -43,4 +61,4 @@ export const products = [
       buttonId: '429MYS54NGDMW'
     }
   }
-]
+];
