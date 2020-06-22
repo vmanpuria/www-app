@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Utils } from '../utils';
 import { Constants } from '../constants';
 import { productObjects } from '../productObjects';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-product-list',
@@ -9,38 +10,38 @@ import { productObjects } from '../productObjects';
   styleUrls: [ './product-list.component.css' ]
 })
 export class ProductListComponent implements OnInit {
-  products = productObjects;
+  products: Array<Product> = productObjects;
 
   ngOnInit(): void {
   }
 
   //https://buycontactlenssolutions.com/#purilens-plus-12-bottle-pack
-  getProductUrl(product): string {
+  getProductUrl(product: Product): string {
     return Utils.getProductUrl(product.id);
   }
 
   // https://buycontactlenssolutions.com/images/purilens-plus-12-bottle-pack.jpeg 
-  getMainImageUrl(product): string {
+  getMainImageUrl(product: Product): string {
     return Utils.getImagePath(Constants.webUrl, product.id, Constants.largeImageSizeType, Constants.jpegImageType);
   }
 
   // ./images/purilens-plus-12-bottle-pack.jpeg
-  getMainImagePath(product): string {
+  getMainImagePath(product: Product): string {
     return Utils.getImagePath(Constants.currentDir, product.id, Constants.largeImageSizeType, Constants.jpegImageType);
   }
 
   // ./images/purilens-plus-12-bottle-pack.jpeg 406w
-  getMainImagePathWithWidth(product): string {
+  getMainImagePathWithWidth(product: Product): string {
     return Utils.getImagePath(Constants.currentDir, product.id, Constants.largeImageSizeType, Constants.jpegImageType);
   }
 
   // ./images/purilens-plus-12-bottle-pack.jpeg
-  getLargeImagePath(product, imageType: string): string {
+  getLargeImagePath(product: Product, imageType: string): string {
     return Utils.getImagePath(Constants.currentDir, product.id, Constants.largeImageSizeType, imageType);
   }
 
   // ./images/purilens-plus-12-bottle-pack-smaller.webp 406w, 
-  getImagePathsWithWidth(product, imageType: string): string {
+  getImagePathsWithWidth(product: Product, imageType: string): string {
     let imagePathsWithWidth: Array<string> = [];
     for (let imageSize of product.image.sizes) {
       let imagePathWithWidth = Utils.getImagePathWithWidth(Constants.currentDir, product.id, imageSize.type, imageType, imageSize.width);

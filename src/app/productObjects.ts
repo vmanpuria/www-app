@@ -1,4 +1,6 @@
-export const productObjects = [
+import { Product } from './product';
+
+export const productObjects: Array<Product> = [
   {
     name: 'PuriLens Plus 12 bottles, 4 oz each, Preservative Free Saline',
     id: 'purilens-plus-12-bottle-pack',
