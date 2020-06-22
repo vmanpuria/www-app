@@ -30,11 +30,6 @@ export class ProductListComponent implements OnInit {
     return Utils.getImagePath(Constants.currentDir, product.id, Constants.largeImageSizeType, Constants.jpegImageType);
   }
 
-  // ./images/purilens-plus-12-bottle-pack.jpeg 406w
-  getMainImagePathWithWidth(product: Product): string {
-    return Utils.getImagePath(Constants.currentDir, product.id, Constants.largeImageSizeType, Constants.jpegImageType);
-  }
-
   // ./images/purilens-plus-12-bottle-pack.jpeg
   getLargeImagePath(product: Product, imageType: string): string {
     return Utils.getImagePath(Constants.currentDir, product.id, Constants.largeImageSizeType, imageType);
