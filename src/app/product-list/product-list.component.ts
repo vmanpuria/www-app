@@ -1,47 +1,49 @@
-import { Component } from '@angular/core';
-import { productList } from '../productList';
+import { Component, OnInit } from '@angular/core';
 import { Utils } from '../utils';
 import { Constants } from '../constants';
-import { Product } from '../product';
+import { productObjects } from '../productObjects';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: [ './product-list.component.css' ]
 })
-export class ProductListComponent {
-  products: Array<Product> = productList;
+export class ProductListComponent implements OnInit {
+  products = productObjects;
+
+  ngOnInit(): void {
+  }
 
   //https://buycontactlenssolutions.com/#purilens-plus-12-bottle-pack
-  getProductUrl(product: Product): string {
+  getProductUrl(product): string {
     return Utils.getProductUrl(product.id);
   }
 
   // https://buycontactlenssolutions.com/images/purilens-plus-12-bottle-pack.jpeg 
-  getMainImageUrl(product: Product): string {
+  getMainImageUrl(product): string {
     return Utils.getImagePath(Constants.webUrl, product.id, Constants.largeImageSizeType, Constants.jpegImageType);
   }
 
   // ./images/purilens-plus-12-bottle-pack.jpeg
-  getMainImagePath(product: Product): string {
+  getMainImagePath(product): string {
     return Utils.getImagePath(Constants.currentDir, product.id, Constants.largeImageSizeType, Constants.jpegImageType);
   }
 
   // ./images/purilens-plus-12-bottle-pack.jpeg 406w
-  getMainImagePathWithWidth(product: Product): string {
+  getMainImagePathWithWidth(product): string {
     return Utils.getImagePath(Constants.currentDir, product.id, Constants.largeImageSizeType, Constants.jpegImageType);
   }
 
   // ./images/purilens-plus-12-bottle-pack.jpeg
-  getLargeImagePath(product: Product, imageType: string): string {
+  getLargeImagePath(product, imageType: string): string {
     return Utils.getImagePath(Constants.currentDir, product.id, Constants.largeImageSizeType, imageType);
   }
 
   // ./images/purilens-plus-12-bottle-pack-smaller.webp 406w, 
-  getImagePathsWithWidth(product: Product, imageType: string): string {
+  getImagePathsWithWidth(product, imageType: string): string {
     let imagePathsWithWidth: Array<string> = [];
     for (let imageSize of product.image.sizes) {
-      let imagePathWithWidth = imageSize.getImagePathWithWidth(Constants.currentDir, product.id, imageType);
+      let imagePathWithWidth = Utils.getImagePathWithWidth(Constants.currentDir, product.id, imageSize.type, imageType, imageSize.width);
       imagePathsWithWidth.push(imagePathWithWidth);
     }
     return imagePathsWithWidth.toString();
