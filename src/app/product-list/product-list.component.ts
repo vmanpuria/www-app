@@ -35,11 +35,21 @@ export class ProductListComponent implements OnInit {
     return Utils.getImagePath(Constants.currentDir, product.id, Constants.largeImageSizeType, imageType);
   }
 
-  // ./images/purilens-plus-12-bottle-pack-smaller.webp 406w, 
+  // ./images/purilens-plus-12-bottle-pack-smaller.webp 406w,
   getImagePathsWithWidth(product: Product, imageType: string): string {
     let imagePathsWithWidth: Array<string> = [];
     for (let imageSize of product.image.sizes) {
       let imagePathWithWidth = Utils.getImagePathWithWidth(Constants.currentDir, product.id, imageSize.type, imageType, imageSize.width);
+      imagePathsWithWidth.push(imagePathWithWidth);
+    }
+    return imagePathsWithWidth.toString();
+  }
+
+  // ./images/purilens-plus-12-bottle-pack-smaller.jpeg 406w,
+  getJpegImagePathsWithWidth(product: Product): string {
+    let imagePathsWithWidth: Array<string> = [];
+    for (let imageSize of product.image.sizes) {
+      let imagePathWithWidth = Utils.getImagePathWithWidth(Constants.currentDir, product.id, imageSize.type, Constants.jpegImageType, imageSize.width);
       imagePathsWithWidth.push(imagePathWithWidth);
     }
     return imagePathsWithWidth.toString();
