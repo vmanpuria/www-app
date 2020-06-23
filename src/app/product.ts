@@ -8,6 +8,7 @@ export interface ImageSize {
 };
 
 export interface Image {
+  id?: string,
   types: Array<string>;
   sizes: Array<ImageSize>;
 };
