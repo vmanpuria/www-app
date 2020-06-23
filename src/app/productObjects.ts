@@ -1,5 +1,8 @@
 import { Product } from './product';
 
+//$ npm install --save angular-in-memory-web-api
+//import {InMemoryDbService} from 'angular-in-memory-web-api'
+//https://www.smashingmagazine.com/2018/11/a-complete-guide-to-routing-in-angular/
 export const productObjects: Array<Product> = [
   {
     name: 'PuriLens Plus 12 bottles, 4 oz each, Preservative Free Saline',
