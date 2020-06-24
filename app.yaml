@@ -1,0 +1,29 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: dist/www-app/index.html
+  upload: dist/www-app/index.html
+
+- url: /(.*)
+  static_files: dist/www-app/\1
+  upload: dist/www-app/(.*)
+
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- ^(.*/)?.*\.md$
+- ^(.*/)?.*\.json$
+- ^(.*/)?.*\.conf\.js$
+- ^(.*/)?.*\.browserslist$
+- ^(.*/)?.*\.workspace$
+- src/
+- e2e/
+- node_modules/
+- scripts/
+
