@@ -183,7 +183,7 @@ export const productObjects: Array<Product> = [
     sku: '310119303689',
     gtin12: '310119303689',
     brand: 'Bausch+Lomb',
-    price: 10.99,
+    price: 9.99,
     features: [
       "Preservative-free saline solution",
       'Rinsing and insertion Solution',
@@ -226,7 +226,7 @@ export const productObjects: Array<Product> = [
     sku: '310119303696',
     gtin12: '310119303696',
     brand: 'Bausch+Lomb',
-    price: 29.99,
+    price: 27.99,
     features: [
       "Preservative-free saline solution",
       'Rinsing and insertion Solution',
