@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Utils } from '../utils';
 import { Constants } from '../constants';
-import { productObjects } from '../productObjects';
 import { Product } from '../product';
+import { ProductDbService } from '../product-db.service';
 
 @Component({
   selector: 'app-product-list',
@@ -10,7 +10,11 @@ import { Product } from '../product';
   styleUrls: [ './product-list.component.css' ]
 })
 export class ProductListComponent implements OnInit {
-  products: Array<Product> = productObjects;
+  products: Array<Product>;
+
+  constructor(productDb: ProductDbService) {
+    this.products = productDb.getProducts()
+  }
 
   ngOnInit(): void {
   }
@@ -20,9 +24,8 @@ export class ProductListComponent implements OnInit {
     return Utils.getProductUrl(product);
   }
 
-  // https://buycontactlenssolutions.com/images/purilens-plus-12-bottle-pack.jpeg 
   getMainImageUrl(product: Product): string {
-    return Utils.getImagePath(Constants.webUrl, product, Constants.largeImageSizeType, Constants.jpegImageType);
+    return Utils.getMainImageUrl(product);
   }
 
   // ./images/purilens-plus-12-bottle-pack.jpeg

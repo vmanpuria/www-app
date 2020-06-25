@@ -13,6 +13,7 @@ import { ReturnsComponent } from './returns/returns.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { SuccessComponent } from './success/success.component';
 import { CancelComponent } from './cancel/cancel.component';
+import { ProductSchemaOrgComponent } from './product-schema-org/product-schema-org.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CancelComponent } from './cancel/cancel.component';
     ReturnsComponent,
     PrivacyComponent,
     SuccessComponent,
-    CancelComponent
+    CancelComponent,
+    ProductSchemaOrgComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,7 @@ import { CancelComponent } from './cancel/cancel.component';
       { path: 'privacy', component: PrivacyComponent }
     ])
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -33,4 +33,9 @@ export class Utils {
     let imagePath = Utils.getImagePath(uri, product, imageSizeType, imageType);
     return Utils.addWidth(imagePath, imageWidth);
   }
+
+  // https://buycontactlenssolutions.com/images/purilens-plus-12-bottle-pack.jpeg
+  static getMainImageUrl(product: Product): string {
+    return Utils.getImagePath(Constants.webUrl, product, Constants.largeImageSizeType, Constants.jpegImageType);
+  }
 }
