@@ -110,23 +110,23 @@ export const productObjects: Array<Product> = [
       sizes: [
         {
           type: 'smallest',
-          width: 113
+          width: 125
         },
         {
           type: 'smaller',
-          width: 149
+          width: 165
         },
         {
           type: 'small',
-          width: 225
+          width: 250
         },
         {
           type: 'medium',
-          width: 338
+          width: 375
         },
         {
           type: 'large',
-          width: 450
+          width: 500
         }
       ]
     },
