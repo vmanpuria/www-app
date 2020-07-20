@@ -11,7 +11,7 @@ export const productObjects: Array<Product> = [
     sku: '830002000025',
     gtin12: '830002000025',
     brand: 'Purilens',
-    price: 65.99,
+    price: 59.99,
     features: [
       "pH-balanced to eye's natural tears for superior comfort",
       'For dry and sensitive eyes',
@@ -55,7 +55,7 @@ export const productObjects: Array<Product> = [
     sku: '830002000087',
     gtin12: '830002000087',
     brand: 'Purilens',
-    price: 21.99,
+    price: 20.99,
     features: [
       "pH-balanced to eye's natural tears for superior comfort",
       'For dry and sensitive eyes',
@@ -93,13 +93,13 @@ export const productObjects: Array<Product> = [
     }
   },
   {
-    name: 'Lobob Optimum Extra Strength Cleaner, 2 oz',
-    id: 'lobob-esc-2-oz',
+    name: 'Lobob Optimum Extra Strength Cleaner, 0.33 oz',
+    id: 'lobob-esc-10-ml',
     description: "Optimum ESC solution is a non-preserved cleaning solution for use with fluorosilicone acrylate and silicone acrylate rigid gas permeable (RGP) and hard contact lenses. ",
     sku: '10250',
     gtin12: '034672102502',
     brand: 'Lobob',
-    price: 45.99,
+    price: 14.99,
     features: [
       "Sterile Cleaning, Non-preserved cleaning solution",
       'for Rigid Gas Permeable Contact Lenses (Fluorosilicone acrylate and silicone acrylate',
@@ -141,7 +141,7 @@ export const productObjects: Array<Product> = [
     sku: '10268',
     gtin12: '034672102687',
     brand: 'Lobob',
-    price: 59.99,
+    price: 49.99,
     features: [
       "Sterile Cleaning, Disinfecting and Storage solution",
       'for Rigid Gas Permeable Contact Lenses (Fluorosilicone acrylate and silicone acrylate',
@@ -183,7 +183,7 @@ export const productObjects: Array<Product> = [
     sku: '310119303689',
     gtin12: '310119303689',
     brand: 'Bausch+Lomb',
-    price: 9.99,
+    price: 6.99,
     features: [
       "Preservative-free saline solution",
       'Rinsing and insertion Solution',
@@ -226,7 +226,7 @@ export const productObjects: Array<Product> = [
     sku: '310119303696',
     gtin12: '310119303696',
     brand: 'Bausch+Lomb',
-    price: 27.99,
+    price: 24.99,
     features: [
       "Preservative-free saline solution",
       'Rinsing and insertion Solution',
@@ -269,7 +269,7 @@ export const productObjects: Array<Product> = [
     sku: '011822334044',
     gtin12: '011822334044',
     brand: 'Unbranded',
-    price: 9.99,
+    price: 7.99,
     features: [
       "Surgical Cone-Style Face Mask, Blue",
       'The cone-shaped mask enables easy donning and is held away from the nose and mouth for comfort and protection',
