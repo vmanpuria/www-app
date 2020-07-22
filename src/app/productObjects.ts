@@ -93,11 +93,53 @@ export const productObjects: Array<Product> = [
     }
   },
   {
-    name: 'Lobob Optimum Extra Strength Cleaner, 0.33 oz',
-    id: 'lobob-esc-10-ml',
+    name: 'Lobob Optimum Extra Strength Cleaner, 2 oz',
+    id: 'lobob-esc-2-oz',
     description: "Optimum ESC solution is a non-preserved cleaning solution for use with fluorosilicone acrylate and silicone acrylate rigid gas permeable (RGP) and hard contact lenses. ",
     sku: '10250',
     gtin12: '034672102502',
+    brand: 'Lobob',
+    price: 49.99,
+    features: [
+      "Sterile Cleaning, Non-preserved cleaning solution",
+      'for Rigid Gas Permeable Contact Lenses (Fluorosilicone acrylate and silicone acrylate',
+      'and for hard contact lenses.'
+    ],
+    image: {
+      types: [ 'webp', 'jpeg' ],
+      sizes: [
+        {
+          type: 'smallest',
+          width: 113
+        },
+        {
+          type: 'smaller',
+          width: 149
+        },
+        {
+          type: 'small',
+          width: 225
+        },
+        {
+          type: 'medium',
+          width: 338
+        },
+        {
+          type: 'large',
+          width: 450
+        }
+      ]
+    },
+    paypal: {
+      buttonId: 'SYFVYWCL85XEJ'
+    }
+  },
+  {
+    name: 'Lobob Optimum Extra Strength Cleaner, 0.33 oz',
+    id: 'lobob-esc-10-ml',
+    description: "Optimum ESC solution is a non-preserved cleaning solution for use with fluorosilicone acrylate and silicone acrylate rigid gas permeable (RGP) and hard contact lenses. ",
+    sku: '10251',
+    gtin12: '034672102519',
     brand: 'Lobob',
     price: 14.99,
     features: [

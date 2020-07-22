@@ -15,6 +15,7 @@ image_prefixes=(
   "scleralfil-saline-solution-30-vials"
   "scleralfil-10-ml-5-vials"
   "lobob-cds-4-oz"
+  "lobob-esc-2-oz"
   "lobob-esc-10-ml"
   "surgical-cone-mask-blue"
 )
@@ -25,6 +26,7 @@ image_titles=(
   "ScleralFil, Preservative Free Saline Solution, 30 vials, 0.34 oz each"
   "ScleralFil, Preservative Free Saline Solution, 5 vials, 10 ml each"
   "Lobob Optimum Cleaning Disinfecting and Storage Solution, 4 oz"
+  "Lobob Optimum Extra Strength Cleaner, 2 oz"
   "Lobob Optimum Extra Strength Cleaner, 10 ml"
   "Surgical Cone Mask, Blue"
 )
