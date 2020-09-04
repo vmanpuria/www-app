@@ -11,7 +11,7 @@ export const productObjects: Array<Product> = [
     sku: '830002000025',
     gtin12: '830002000025',
     brand: 'Purilens',
-    price: 59.99,
+    price: 54.99,
     features: [
       "pH-balanced to eye's natural tears for superior comfort",
       'For dry and sensitive eyes',
@@ -55,7 +55,7 @@ export const productObjects: Array<Product> = [
     sku: '830002000087',
     gtin12: '830002000087',
     brand: 'Purilens',
-    price: 20.99,
+    price: 18.99,
     features: [
       "pH-balanced to eye's natural tears for superior comfort",
       'For dry and sensitive eyes',
@@ -99,7 +99,7 @@ export const productObjects: Array<Product> = [
     sku: '10250',
     gtin12: '034672102502',
     brand: 'Lobob',
-    price: 49.99,
+    price: 89.99,
     features: [
       "Sterile Cleaning, Non-preserved cleaning solution",
       'for Rigid Gas Permeable Contact Lenses (Fluorosilicone acrylate and silicone acrylate',
@@ -141,7 +141,7 @@ export const productObjects: Array<Product> = [
     sku: '10251',
     gtin12: '034672102519',
     brand: 'Lobob',
-    price: 14.99,
+    price: 24.99,
     features: [
       "Sterile Cleaning, Non-preserved cleaning solution",
       'for Rigid Gas Permeable Contact Lenses (Fluorosilicone acrylate and silicone acrylate',
@@ -183,7 +183,7 @@ export const productObjects: Array<Product> = [
     sku: '10268',
     gtin12: '034672102687',
     brand: 'Lobob',
-    price: 49.99,
+    price: 69.99,
     features: [
       "Sterile Cleaning, Disinfecting and Storage solution",
       'for Rigid Gas Permeable Contact Lenses (Fluorosilicone acrylate and silicone acrylate',
@@ -225,8 +225,9 @@ export const productObjects: Array<Product> = [
     sku: '310119303689',
     gtin12: '310119303689',
     brand: 'Bausch+Lomb',
-    price: 6.99,
+    price: 4.99,
     features: [
+      "EXPIRED: 7/2020",
       "Preservative-free saline solution",
       'Rinsing and insertion Solution',
       'For Soft and Rigid Gas Permeable Lenses.',
@@ -268,8 +269,9 @@ export const productObjects: Array<Product> = [
     sku: '310119303696',
     gtin12: '310119303696',
     brand: 'Bausch+Lomb',
-    price: 24.99,
+    price: 14.99,
     features: [
+      "EXPIRED: 7/2020",
       "Preservative-free saline solution",
       'Rinsing and insertion Solution',
       'For Soft and Rigid Gas Permeable Lenses.',
