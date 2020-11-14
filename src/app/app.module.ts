@@ -32,14 +32,14 @@ import { ProductSchemaOrgComponent } from './product-schema-org/product-schema-o
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
-      { path: 'success', component: SuccessComponent },
-      { path: 'cancel', component: CancelComponent },
-      { path: 'contact-us', component: ContactUsComponent },
-      { path: 'terms', component: TermsComponent },
-      { path: 'returns', component: ReturnsComponent },
-      { path: 'privacy', component: PrivacyComponent }
-    ])
+    { path: '', component: ProductListComponent },
+    { path: 'success', component: SuccessComponent },
+    { path: 'cancel', component: CancelComponent },
+    { path: 'contact-us', component: ContactUsComponent },
+    { path: 'terms', component: TermsComponent },
+    { path: 'returns', component: ReturnsComponent },
+    { path: 'privacy', component: PrivacyComponent }
+], { relativeLinkResolution: 'legacy' })
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
